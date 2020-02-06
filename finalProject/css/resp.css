@@ -322,6 +322,9 @@
     .main-bottom-btn {
         display: none;
     }
+    .cartpopup__name {
+        width: 180px;
+    }
 }
 
 
