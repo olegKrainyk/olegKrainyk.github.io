@@ -55,6 +55,12 @@ nav ul li a {
     font-family: 'Open Sans', sans-serif;
     margin-bottom: 0 !important;
 }
+.cart-wrap {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    z-index: 10000;
+}
 .cart {
     width: 45px;
     height: 40px;

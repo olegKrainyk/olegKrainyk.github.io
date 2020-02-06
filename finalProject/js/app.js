@@ -180,8 +180,10 @@ class CartNum {
 
     render(count) {
         const html = `
+        <div class="cart-wrap">
         <div class="cart" onclick="cartNum.handleOpenCartPopUp();">
         <span class="quantity">${count}</span>
+        </div>
         </div>
         `;
 

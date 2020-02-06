@@ -265,6 +265,10 @@
         font-size: 14px;
         width: 40%;
     }
+    .cart-wrap {
+        top: 30px;
+        left: 40px;
+    }
     .cartpopup__name {
         font-size: 13px;
         padding: 4px;
