@@ -1,0 +1,57 @@
+@import 'header.css';
+@import 'content.css';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+@import 'footer.css';
+@import 'goods.css';
+@import 'buypopup.css';
+@import 'resp.css';
+
+
+
+* {
+    box-sizing: border-box !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif !important;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0 !important;
+}
+li {
+    list-style: none;
+    margin: 0;
+}
+h1 {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+a:hover {
+    text-decoration: none !important;
+}
+button {
+    background: white;
+    border: none;
+    cursor: pointer !important;
+    padding: 8px 20px;
+    outline: none !important;
+}
+.content {
+    max-width: 1600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.no-show {
+    display: none;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Releases</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <header class="content">
+        <div class="shop" title="Home">
+            <a href="index.html">
+                <h1>Ballers Shoes</h1>
+                <img src="img/logo-1.png" alt="" class="logo">
+            </a>
+        </div>
+    
+        <nav>
+            <ul>
+                <li><a href="newrel.html">New Releases</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+            </ul>
+        </nav>
+    
+        <div id="cart"></div>
+    
+        <div class="mob-btn">
+            <span></span>
+        </div>
+    </header>
+
+    <div class="search-wrap">
+        <input type="text" id="search-new" class="search" placeholder="Search with name...">
+    </div>
+
+    <div class='sorting-btns'>
+        <div class="sorting-wrap">
+            <span>Sort:</span>
+            <button class='sort-btn' onclick="productsPage.sortNewDef();">By Default</button>
+            <button class='sort-btn' onclick="productsPage.sortNewExCh();">From expensive to cheap</button>
+            <button class='sort-btn' onclick="productsPage.sortNewChEx();">From cheap to expensive</button>
+        </div>
+
+        <div class="filters-wrap no-show">
+            <span class="filter-title">Filters:</span>
+            <div class="filter"><button class="sort-btn" onclick="productsPage.filterLifestyleNew();">Lifestyle</button></div>
+            <div class="filter"><button class="sort-btn" onclick="productsPage.filterBasketballNew();">Basketball</button></div>
+        </div>
+    </div>
+
+    <div id="goods" class="content">
+
+    </div>
+
+    <div id="cartpopup"></div>
+    <div id="buypopup"></div>
+
+    <footer class="content footer-margin-top"></footer>
+
+
+    <script src="js/localStorageUtil.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/new_releases.js"></script>
+
+    <script type="text/javascript">var scrolltotop = { setting: { startline: 600, scrollto: 0, scrollduration: 1e3, fadeduration: [300, 100] }, controlHTML: '<span class="btn-up">&uarr;</span>', controlattrs: { offsetx: 5, offsety: 5 }, anchorkeyword: "#top", state: { isvisible: !1, shouldvisible: !1 }, scrollup: function () { this.cssfixedsupport || this.$control.css({ opacity: 0 }); var t = isNaN(this.setting.scrollto) ? this.setting.scrollto : parseInt(this.setting.scrollto); t = "string" == typeof t && 1 == jQuery("#" + t).length ? jQuery("#" + t).offset().top : 0, this.$body.animate({ scrollTop: t }, this.setting.scrollduration) }, keepfixed: function () { var t = jQuery(window), o = t.scrollLeft() + t.width() - this.$control.width() - this.controlattrs.offsetx, s = t.scrollTop() + t.height() - this.$control.height() - this.controlattrs.offsety; this.$control.css({ left: o + "px", top: s + "px" }) }, togglecontrol: function () { var t = jQuery(window).scrollTop(); this.cssfixedsupport || this.keepfixed(), this.state.shouldvisible = t >= this.setting.startline ? !0 : !1, this.state.shouldvisible && !this.state.isvisible ? (this.$control.stop().animate({ opacity: 1 }, this.setting.fadeduration[0]), this.state.isvisible = !0) : 0 == this.state.shouldvisible && this.state.isvisible && (this.$control.stop().animate({ opacity: 0 }, this.setting.fadeduration[1]), this.state.isvisible = !1) }, init: function () { jQuery(document).ready(function (t) { var o = scrolltotop, s = document.all; o.cssfixedsupport = !s || s && "CSS1Compat" == document.compatMode && window.XMLHttpRequest, o.$body = t(window.opera ? "CSS1Compat" == document.compatMode ? "html" : "body" : "html,body"), o.$control = t('<div id="topcontrol">' + o.controlHTML + "</div>").css({ position: o.cssfixedsupport ? "fixed" : "absolute", bottom: o.controlattrs.offsety, right: o.controlattrs.offsetx, opacity: 0, cursor: "pointer" }).attr({ title: "Scroll to Top" }).click(function () { return o.scrollup(), !1 }).appendTo("body"), document.all && !window.XMLHttpRequest && "" != o.$control.text() && o.$control.css({ width: o.$control.width() }), o.togglecontrol(), t('a[href="' + o.anchorkeyword + '"]').click(function () { return o.scrollup(), !1 }), t(window).bind("scroll resize", function (t) { o.togglecontrol() }) }) } }; scrolltotop.init();</script>
+</body>
+
+</html>
