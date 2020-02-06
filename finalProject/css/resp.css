@@ -262,7 +262,7 @@
     }
     .cart-wrap {
         top: 20px;
-        left: 5px;
+        left: -7px;
     }
     .cartpopup__name {
         font-size: 13px;
@@ -283,6 +283,7 @@
     .form__container {
         padding: 7px;
         height: 84vh;
+        overflow-y: scroll;
     }
     .form {
         margin-left: 20px;

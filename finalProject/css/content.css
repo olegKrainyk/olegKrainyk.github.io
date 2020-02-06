@@ -82,6 +82,6 @@
 }
 .main-bottom-btn:hover {
     transform: translate(-50%, calc(-50% + 5px));
-    line-height: 47px;
+    line-height: 48px;
     transition: .3s;
 }
