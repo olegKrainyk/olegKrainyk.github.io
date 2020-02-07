@@ -43,6 +43,9 @@ nav ul li a {
     height: 70px;
     display: inline-block;
 }
+.logo-btn {
+    cursor: pointer;
+}
 .shop a {
     display: flex !important;
     align-items: center !important;
@@ -60,6 +63,7 @@ nav ul li a {
     display: inline-block;
     top: 30px;
     right: 40px;
+    width: 60px;
     z-index: 10000;
 }
 .cart {

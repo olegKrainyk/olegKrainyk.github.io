@@ -5,9 +5,6 @@
     .main-left-col {
         background-position: 50%;
     }
-    .main-left-col, .main-right-col {
-        height: 500px;
-    }
     .sorting-btns {
         width: 95%;
         margin-top: 20px;
@@ -181,6 +178,9 @@
     .footer_rights {
         font-size: 13px;
     }
+    .main-bottom-btn {
+        bottom: 14%;
+    }
 }
 
 @media all and (max-width: 760px) {
@@ -321,9 +321,6 @@
     .footer_links, .footer_contacts, .footer_about {
         font-size: 8px;
     }
-    .main-bottom-btn {
-        display: none;
-    }
     .cartpopup__name {
         width: 180px;
     }
@@ -331,12 +328,9 @@
 
 
 @media all and (max-width: 540px) {
-    .main-left-col, .main-right-col {
-        height: 350px;
-    }
     .sort-btn {
         font-size: 12px;
-        padding: 8px;
+        padding: 8px 2px;
     }
     .products-element__btn {
         font-size: 11px;
