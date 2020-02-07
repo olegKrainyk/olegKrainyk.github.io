@@ -101,7 +101,7 @@ nav ul li a {
     display: none;
     width: 35px;
     height: 35px;
-    background-color: white;
+    background-color: transparent;
     position: relative;
     cursor: pointer;
     z-index: 1000;
