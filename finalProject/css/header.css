@@ -138,7 +138,6 @@ nav ul li a {
 .hidden-nav{
     display: inline-block;
     transform: translateX(0);
-    
 }
 .nav-btn-active span::before{
     transform: rotate(45deg);

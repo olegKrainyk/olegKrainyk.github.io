@@ -12,7 +12,7 @@ window.onload = function () {
         }
     });
 
-    $('nav ul li').click(function () {
+    $('nav ul li a').click(function () {
         if (document.documentElement.clientWidth <= 760) {
             nav.classList.toggle('hidden-nav');
             btn.classList.toggle('nav-btn-active');
