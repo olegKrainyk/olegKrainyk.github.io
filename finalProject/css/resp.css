@@ -348,7 +348,7 @@
 
 @media all and (max-width: 540px) {
     .shop h1 {
-        font-size: 18px;
+        font-size: 19px;
     }
     .logo {
         width: 50px;
@@ -360,13 +360,13 @@
     }
     .products-element__btn {
         font-size: 11px;
-        width: 70%;
+        width: 60%;
     }
     .products-container {
         grid-template-columns: repeat(1, minmax(250px, 1fr));
     }
     .products-element__img {
-        height: 140px;
+        height: 180px;
     }
     .products-element__name {
         font-size: 12px;
