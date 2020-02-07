@@ -7,7 +7,6 @@
     }
     .sorting-btns {
         width: 95%;
-        margin-top: 20px;
     }
     .products-container {
         grid-template-columns: repeat(2, minmax(220px, 1fr));
@@ -119,7 +118,7 @@
         font-size: 16px !important;
     }
     .sorting-btns {
-        margin-top: 15px;
+        margin-top: 7px;
     }
     .sort-btn {
         padding: 8px; 
@@ -262,11 +261,11 @@
         font-size: 12px;
     }
     .sorting-btns {
-        margin-top: 10px;
+        margin-top: 5px;
     }
     .sort-btn {
-        font-size: 15px;
-        padding: 10px 6px;
+        font-size: 13px;
+        padding: 8px 5px;
     }
     .products-container {
         grid-template-columns: repeat(2, minmax(180px, 1fr));
