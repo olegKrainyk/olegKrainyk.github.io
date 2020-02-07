@@ -209,7 +209,10 @@
         width: 35px;
         height: 23px;
         order: 1;
-        margin-left: 3px;
+        margin-left: 4px;
+    }
+    .shop h1 {
+        font-size: 22px;
     }
     nav {
         z-index: 100;
@@ -241,9 +244,6 @@
         right: 0;
         width: 100%;
         transition: 0.4s;
-    }
-    header {
-        justify-content: space-between;
     }
     .slide-shop-now {
         font-size: 14px !important;
@@ -340,8 +340,8 @@
 
 @media all and (max-width: 540px) {
     .sort-btn {
-        font-size: 13px;
-        padding: 9px 6px;
+        font-size: 11px;
+        padding: 9px 5px;
     }
     .products-element__btn {
         font-size: 11px;
