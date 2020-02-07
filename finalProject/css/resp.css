@@ -269,12 +269,17 @@
         padding: 10px 6px;
     }
     .products-container {
-        grid-template-columns: repeat(1, minmax(250px, 1fr));
-        grid-gap: 30px;
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+        width: 90%;
+        grid-gap: 20px;
     }
     .products-element__btn {
         font-size: 14px;
         width: 40%;
+    }
+    .products-element__img {
+        width: 85%;
+        height: 150px;
     }
     .cartpopup__name {
         font-size: 13px;
@@ -342,15 +347,32 @@
 
 
 @media all and (max-width: 540px) {
+    .shop h1 {
+        font-size: 18px;
+    }
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
     .sort-btn {
         font-size: 10px;
-        padding: 9px 5px;
+        padding: 9px 4px;
     }
     .products-element__btn {
         font-size: 11px;
-        width: 50%;
+        width: 70%;
+    }
+    .products-container {
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+    }
+    .products-element__img {
+        height: 140px;
+    }
+    .products-element__name {
+        font-size: 12px;
     }
 }
+
 
 
 
