@@ -57,6 +57,7 @@ nav ul li a {
 }
 .cart-wrap {
     position: fixed;
+    display: inline-block;
     top: 30px;
     right: 40px;
     z-index: 10000;
@@ -72,7 +73,7 @@ nav ul li a {
     transition: .2s;
 }
 .cart:hover {
-    transform: translateX(4px);
+    transform: translateX(3px);
     transition: .2s;
 }
 
@@ -94,10 +95,9 @@ nav ul li a {
 
 .mob-btn {
     display: none;
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     background-color: white;
-    border-radius: 50%;
     position: relative;
     cursor: pointer;
     z-index: 1000;
@@ -110,7 +110,7 @@ nav ul li a {
     top: 50%;
     left: 50%; margin-left: -11px;
     width: 22px;
-    height: 2px;
+    height: 2.5px;
     margin-top: -1px;
     background-color: #000;
     border-radius: 3px;
@@ -125,11 +125,11 @@ nav ul li a {
 }
 
 .mob-btn span::before{
-    transform: translateY(-6px);
+    transform: translateY(-8px);
 } 
 
 .mob-btn span::after{
-    transform: translateY(6px);
+    transform: translateY(8px);
 }
 .hidden-nav{
     display: inline-block;
