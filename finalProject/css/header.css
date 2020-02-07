@@ -174,8 +174,3 @@ nav ul li a {
     transform: translateY(-5px);
     transition: .3s;
 }
-.empty-div {
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-}

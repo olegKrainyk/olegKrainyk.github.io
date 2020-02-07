@@ -19,9 +19,6 @@
     .sorting-btns span {
         font-size: 16px;
     }
-    .sorting-wrap {
-        margin-top: 10px;
-    }
     .cratpopup__container {
         padding: 15px;
     }
@@ -95,7 +92,7 @@
         margin-top: 10px;
     }
     .main-bottom-btn {
-        bottom: 7%;
+        bottom: 10%;
     }
 }
 
@@ -128,21 +125,27 @@
         font-size: 14px;
     }
     .products-element__name {
-        font-size: 13px;
+        font-size: 14px;
     }
     .products-element__price {
         font-size: 16px;
+        margin-bottom: 5px;
     }
     .products-element__btn {
         font-size: 12px;
         width: 50%;
+        margin-top: 5px
+    }
+    .products-element__img {
+        width: 85%;
+        height: 200px;
+    }
+    .products-element {
+        padding: 3px 0;
     }
     .btn-up {
         right: 20px;
         bottom: 20px;
-    }
-    .sorting-btns span {
-        font-size: 14px;
     }
     .sorting-btns {
         flex-wrap: wrap;
@@ -150,18 +153,9 @@
     .filter {
         font-size: 14px;
     }
-    .filters-wrap {
-        margin-top: 10px;
-    }
     .filters-wrap, .sorting-wrap {
         display: flex;
         flex-direction: column;
-    }
-    .wrap-for-sorting-btns {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
     }
     .cratpopup__container {
         padding: 12px;
@@ -190,17 +184,20 @@
     }
     .main-bottom-btn {
         bottom: 14%;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 19px;
+    }
+    .main-bottom-btn:hover {
+        line-height: 36px;
+    }
+    .filter-title {
+        margin-left: 0;
     }
 }
 
 @media all and (max-width: 760px) {
-    .shop h1 {
-        font-size: 18px;
-    }
-    .logo {
-        width: 50px;
-        height: 50px;
-    }
     .mob-btn {
         display: inline-block;
     }
@@ -262,12 +259,11 @@
         font-size: 12px;
     }
     .sorting-btns {
-        width: 95%;
         margin-top: 10px;
     }
     .sort-btn {
-        font-size: 10px;
-        padding: 5px 3px;
+        font-size: 15px;
+        padding: 10px 6px;
     }
     .products-container {
         grid-template-columns: repeat(1, minmax(250px, 1fr));
@@ -284,6 +280,7 @@
     .cartpopup__price {
         font-size: 13px;
         padding: 4px;
+        margin-bottom: 5px;
     }
     .cartpopup__img {
         width: 35px;
@@ -335,13 +332,16 @@
     .cartpopup__name {
         width: 180px;
     }
+    .filters-wrap, .sorting-wrap{
+        margin-top: 5px;
+    }
 }
 
 
 @media all and (max-width: 540px) {
     .sort-btn {
-        font-size: 10px;
-        padding: 4px 2px;
+        font-size: 13px;
+        padding: 9px 6px;
     }
     .products-element__btn {
         font-size: 11px;
