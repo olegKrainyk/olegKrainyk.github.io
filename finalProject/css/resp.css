@@ -267,6 +267,9 @@
         width: 100%;
         transition: 0.4s;
     }
+    .inf {
+        margin-top: 0;
+    }
     .main-right-col, .main-left-col {
         height: 50vh;
         width: 50vw;
@@ -461,13 +464,16 @@
     }
 }
 
-@media all and (max-width: 1100px) {
+@media all and (max-width: 1366px) {
     .main-right-col, .main-left-col {
-        height: 50vh;
+        height: 80vh;
         width: 50vw;
     }
     .main-bottom-btn {
         bottom: 7%;
+    }
+    .inf {
+        margin-top: 20px;
     }
 }
 
