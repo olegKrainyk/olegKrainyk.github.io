@@ -2,8 +2,8 @@
     .main-right-col h2 {
         font-size: 25px;
     }
-    .main-left-col {
-        background-position: 50%;
+    .main-right-col, .main-left-col {
+        height: 50vh;
     }
     nav {
         width: 45%;
@@ -271,7 +271,7 @@
         margin-top: 0;
     }
     .main-right-col, .main-left-col {
-        height: 50vh;
+        height: 50vh !important;
         width: 50vw;
     }
     .slide-shop-now {
@@ -371,9 +371,6 @@
         height: 25px !important;
         width: 25px !important;
     }
-    .main-bottom-btn {
-        display: none;
-    }
 }
 
 
@@ -427,7 +424,10 @@
         height: 2px !important;
     }
     .main-right-col, .main-left-col {
-        height: 40vh;
+        height: 40vh !important;
+    }
+    .main-bottom-btn {
+        display: none;
     }
 }
 
