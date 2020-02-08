@@ -448,7 +448,7 @@ class Footer {
         <div class="footer_about">
             About Us
             <p>
-                We are best shop with basketball stuff located in Los-Angeles, CA.
+                We are the best shop with basketball stuff located in Los-Angeles, CA.
                 <br>
                 Hope you had cool experience using our site :)
             </p>
