@@ -12,6 +12,10 @@
         font-size: 14px;
         padding: 8px 15px;
     }
+    .cart-wrap {
+        top: 20px;
+        right: 20px;
+    }
     .sorting-btns {
         width: 95%;
     }
@@ -98,7 +102,7 @@
         margin-top: 10px;
     }
     .main-bottom-btn {
-        bottom: 10%;
+        bottom: 5%;
     }
 }
 
@@ -119,7 +123,14 @@
         font-size: 12px;
         padding: 8px 10px;
     }
-    
+    .cart {
+        width: 35px;
+        height: 30px;
+    }
+    .main-right-col, .main-left-col {
+        height: 60vh;
+        width: 50vw;
+    }
     .shop h1 {
         font-size: 25px;
     }
@@ -193,14 +204,14 @@
         font-size: 13px;
     }
     .main-bottom-btn {
-        bottom: 14%;
+        bottom: 8%;
         width: 30px;
         height: 30px;
         line-height: 30px;
         font-size: 19px;
     }
     .main-bottom-btn:hover {
-        line-height: 36px;
+        line-height: 34px;
     }
     .filter-title {
         margin-left: 0;
@@ -255,6 +266,10 @@
         right: 0;
         width: 100%;
         transition: 0.4s;
+    }
+    .main-right-col, .main-left-col {
+        height: 50vh;
+        width: 50vw;
     }
     .slide-shop-now {
         font-size: 14px !important;
@@ -353,6 +368,9 @@
         height: 25px !important;
         width: 25px !important;
     }
+    .main-bottom-btn {
+        display: none;
+    }
 }
 
 
@@ -405,6 +423,9 @@
         width: 15px !important;
         height: 2px !important;
     }
+    .main-right-col, .main-left-col {
+        height: 40vh;
+    }
 }
 
 @media all and (max-width: 340px) {
@@ -429,7 +450,27 @@
     .cartpopup__name {
         font-size: 9px;
     }
+    .main-right-col, .main-left-col {
+        height: 50vh;
+    }
+    .shop-now {
+        font-size: 14px;
+    }
+    .main-right-col h2 {
+        font-size: 18px;
+    }
 }
+
+@media all and (max-width: 1100px) {
+    .main-right-col, .main-left-col {
+        height: 50vh;
+        width: 50vw;
+    }
+    .main-bottom-btn {
+        bottom: 7%;
+    }
+}
+
 
 
 
