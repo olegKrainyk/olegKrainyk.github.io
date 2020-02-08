@@ -4,6 +4,8 @@
 }
 .main-left-col, .main-right-col {
     width: 50%;
+    height: 100vh;
+    max-height: 800px;
 }
 .main-left-col {
     height: 100vh;
