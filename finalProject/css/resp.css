@@ -5,6 +5,13 @@
     .main-left-col {
         background-position: 50%;
     }
+    nav {
+        width: 45%;
+    }
+    nav ul li {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
     .sorting-btns {
         width: 95%;
     }
@@ -109,8 +116,10 @@
         width: 50%;
     }
     nav ul li {
-        font-size: 13px;
+        font-size: 12px;
+        padding: 8px 10px;
     }
+    
     .shop h1 {
         font-size: 25px;
     }

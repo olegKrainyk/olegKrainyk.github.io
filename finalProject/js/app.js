@@ -30,6 +30,7 @@ class Nav {
 
         const htmlNav = `
         <ul>
+        <li><a href="index.html">Home</a></li>
         <li><a href="newrel.html">New Releases</a></li>
         <li><a href="men.html">Men</a></li>
         <li><a href="women.html">Women</a></li>
