@@ -291,8 +291,8 @@
         margin-top: 5px;
     }
     .sort-btn {
-        font-size: 13px;
-        padding: 8px 5px;
+        font-size: 14px;
+        padding: 8px;
     }
     .products-container {
         grid-template-columns: repeat(2, minmax(180px, 1fr));
@@ -424,7 +424,7 @@
         height: 2px !important;
     }
     .main-right-col, .main-left-col {
-        height: 40vh !important;
+        height: 35vh !important;
     }
     .main-bottom-btn {
         display: none;
