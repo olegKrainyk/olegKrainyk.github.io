@@ -295,7 +295,7 @@
         padding: 8px;
     }
     .products-container {
-        grid-template-columns: repeat(2, minmax(180px, 1fr));
+        grid-template-columns: repeat(2, minmax(160px, 1fr));
         width: 90%;
         grid-gap: 20px;
     }
@@ -399,10 +399,10 @@
         width: 60%;
     }
     .products-container {
-        grid-template-columns: repeat(2, minmax(160px, 1fr));
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
     }
     .products-element__img {
-        height: 120px;
+        height: 110px;
     }
     .products-element__name {
         font-size: 12px;
