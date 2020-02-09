@@ -241,6 +241,12 @@
 @media all and (max-width: 760px) {
     .mob-btn {
         display: inline-block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    header {
+        justify-content: center !important;
     }
     .cart-wrap {
         top: 15px;
@@ -479,6 +485,10 @@
 }
 
 @media all and (max-width: 340px) {
+    .mob-btn {
+        top: 5px;
+        right: 7px;
+    }
     .logo {
         width: 40px;
         height: 40px;
