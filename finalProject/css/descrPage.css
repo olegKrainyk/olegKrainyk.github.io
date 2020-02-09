@@ -6,6 +6,7 @@
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 }
 .product-descr__img {
     width: 60%;
@@ -44,4 +45,20 @@
 }
 .product-descr__btn_active {
     background-color: gray;
+}
+.product-descr__back-btn {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 50%;
+    cursor: pointer;
 }
