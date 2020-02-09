@@ -12,7 +12,7 @@ const CATALOG = [
         name: "Air Jordan 1 Retro High Pine Green",
         img: "img/catalog/2.jpg",
         type: "lifestyle",
-        price: 170,
+        price: 230,
         gender: "men"
     },
     {

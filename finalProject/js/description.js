@@ -1,3 +1,12 @@
+function gethash() {
+    let hash = window.location.hash.substring(1);
+    console.log(hash);
+}
+
+gethash();
+
+
+
 //responsive menu
 window.onload = function () {
     let btn = document.querySelector('.mob-btn');
@@ -20,32 +29,16 @@ window.onload = function () {
         }
     });
     navigation.render();
+    descr.render();
     footer.render();
 };
 
-//render nav for html pages
-class Nav {
-
-    render() {
-        const htmlNav = `
-        <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="newrel.html">New Releases</a></li>
-        <li><a href="men.html">Men</a></li>
-        <li><a href="women.html">Women</a></li>
-        </ul>
-        `;
-        document.querySelector('nav').innerHTML = htmlNav;
-    }
-}
-const navigation = new Nav();
 
 
-
-//render products and filter methods for them
-class Products {
+//render product block with hash of the page
+class Description {
     constructor() {
-        this.classNameActive = 'products-element__btn_active';
+        this.classNameActive = 'product-descr__btn_active';
         this.labelAdd = 'Add to cart';
         this.labelRemove = 'Remove';
     }
@@ -64,94 +57,13 @@ class Products {
     }
 
 
-    sortDef() {
-        productsPage.filterMen();
-    }
-    sortExCh() {
-        let sortedCatalog = CATALOG.filter(el => el.gender == "men").sort((a, b) => b.price - a.price);
-        this.render(sortedCatalog);
-    }
-
-    sortChEx() {
-        let sortedCatalog = CATALOG.filter(el => el.gender == "men").sort((a, b) => a.price - b.price);
-        this.render(sortedCatalog);
-    }
-
-
-    filterMen() {
-        let filteredcatalog = CATALOG.filter(el => el.gender == "men");
-        this.render(filteredcatalog);
-    }
-
-
-    filterLifestyle() {
-        let filteredcatalog = CATALOG.filter(el => el.type == "lifestyle");
-        this.render(filteredcatalog);
-    }
-    filterBasketball() {
-        let filteredcatalog = CATALOG.filter(el => el.type == "basketball");
-        this.render(filteredcatalog);
-    }
-    filterNew() {
-        let filteredcatalog = CATALOG.filter(el => el.new == "new");
-        this.render(filteredcatalog);
-    }
-
-
-    //sorting for women
-    filterWomen() {
-        let filteredcatalog = CATALOG.filter(el => el.gender == "women");
-        this.render(filteredcatalog);
-    }
-    sortWomenDef() {
-        productsPage.filterWomen();
-    }
-    sortWomenExCh() {
-        let sortedCatalog = CATALOG.filter(el => el.gender == "women").sort((a, b) => b.price - a.price);
-        this.render(sortedCatalog);
-    }
-    sortWomenChEx() {
-        let sortedCatalog = CATALOG.filter(el => el.gender == "women").sort((a, b) => a.price - b.price);
-        this.render(sortedCatalog);
-    }
-    filterLifestyleWomen() {
-        let filteredcatalog = CATALOG.filter(el => el.gender == "women").filter(el => el.type == "lifestyle-women");
-        this.render(filteredcatalog);
-    }
-    filterBasketballWomen() {
-        let filteredcatalog = CATALOG.filter(el => el.gender == "women").filter(el => el.type == "basketball-women");
-        this.render(filteredcatalog);
-    }
-
-
-    //sorting for new releases
-    sortNewDef() {
-        productsPage.filterNew();
-    }
-    sortNewExCh() {
-        let sortedCatalog = CATALOG.filter(el => el.new == "new").sort((a, b) => b.price - a.price);
-        this.render(sortedCatalog);
-    }
-    sortNewChEx() {
-        let sortedCatalog = CATALOG.filter(el => el.new == "new").sort((a, b) => a.price - b.price);
-        this.render(sortedCatalog);
-    }
-    filterLifestyleNew() {
-        let filteredcatalog = CATALOG.filter(el => el.new == "new").filter(el => el.type == "lifestyle-women");
-        this.render(filteredcatalog);
-    }
-    filterBasketballNew() {
-        let filteredcatalog = CATALOG.filter(el => el.new == "new").filter(el => el.type == "basketball-women");
-        this.render(filteredcatalog);
-    }
-
-
-
-    render(catalog) {
+    render() {
         const productsStore = localStorageUtil.getProducts();
-        let htmlCatalog = '';
+        let htmlDescription = '';
+        let hash = '';
+        hash += `${window.location.hash.substring(1)}`;
+        CATALOG.filter(el => el.id == hash).forEach(({ id, name, price, img }) => {
 
-        catalog.forEach(({ id, name, price, img }) => {
             let activeClass = '';
             let activeText = '';
 
@@ -162,29 +74,42 @@ class Products {
                 activeClass = ' ' + this.classNameActive;
             }
 
-            htmlCatalog += `
-                <li class='products-element'>
-                    <a href="description.html#${id}">
-                        <img class='products-element__img' src="${img}" />
-                        <span class='products-element__name'>${name}</span>
-                        <span class='products-element__price'>${price.toLocaleString()} $</span>
-                    </a>
-                    <button class='products-element__btn${activeClass}' onclick="productsPage.handleSetLocationStorage(this, '${id}');" title="Cart is on top">${activeText}</button>
-                </li>
-            `;
+            htmlDescription += `
+                <div class='product-descr__container content'>
+                    <img class='product-descr__img' src="${img}" />
+                        <div class='product-descr__info'>
+                                <span class='product-descr__name'>${name}</span>
+                                <span class='product-descr__price'>${price.toLocaleString()} $</span>
+                                <button class='product-descr__btn${activeClass}' onclick="descr.handleSetLocationStorage(this, '${id}');">${activeText}</button>
+                        </div>
+                </div>
+                `;
+                document.title =`${name}`;
+            document.getElementById("descr").innerHTML = htmlDescription;
         });
-
-        const html = `
-            <ul class='products-container'>
-                ${htmlCatalog}
-            </ul>
-        `;
-
-        document.getElementById("goods").innerHTML = html;
     }
 }
+const descr = new Description;
 
-const productsPage = new Products();
+//render nav for html pages
+class Nav {
+
+    render() {
+
+        const htmlNav = `
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="newrel.html">New Releases</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="women.html">Women</a></li>
+        </ul>
+        `;
+
+        document.querySelector('nav').innerHTML = htmlNav;
+    }
+}
+const navigation = new Nav();
+
 
 
 
@@ -219,7 +144,6 @@ cartNum.render(productsStore.length);
 //class for rendering cart popUp
 class CartPopUp {
 
-
     handleClear() {
         document.getElementById("cartpopup").innerHTML = '';
     }
@@ -237,15 +161,12 @@ class CartPopUp {
                     <td><img class="cartpopup__img" src="${img}" /></td>
                     <td class="cartpopup__name">${name}</td>
                     <td  class="cartpopup__price">${price.toLocaleString()} $</td>
-                    <td  class="cartpopup__remove" onclick="productsPage.handleSetLocationStorage(this, '${id}'), productsPage.render(CATALOG), cartPopUp.render();">&times;</td>
+                    <td  class="cartpopup__remove" onclick="descr.handleSetLocationStorage(this, '${id}'), descr.render(), cartPopUp.render();">&times;</td>
                 </tr>
                 `;
                 sum += price;
             }
         });
-
-
-
 
         const html = `
         <div class="cratpopup__container">
@@ -267,38 +188,6 @@ class CartPopUp {
 }
 
 const cartPopUp = new CartPopUp();
-
-
-
-
-//search with products names
-$('#search-men').on('keyup', (e) => {
-    let search = $(e.currentTarget).val();
-    let result = CATALOG.filter(el => el.gender == "men").filter(el => {
-        let name = el.name.toLowerCase();
-        let lowerSearch = search.toLowerCase();
-        return name.indexOf(lowerSearch) >= 0;
-    });
-    productsPage.render(result);
-});
-$('#search-women').on('keyup', (e) => {
-    let search = $(e.currentTarget).val();
-    let result = CATALOG.filter(el => el.gender == "women").filter(el => {
-        let name = el.name.toLowerCase();
-        let lowerSearch = search.toLowerCase();
-        return name.indexOf(lowerSearch) >= 0;
-    });
-    productsPage.render(result);
-});
-$('#search-new').on('keyup', (e) => {
-    let search = $(e.currentTarget).val();
-    let result = CATALOG.filter(el => el.new == "new").filter(el => {
-        let name = el.name.toLowerCase();
-        let lowerSearch = search.toLowerCase();
-        return name.indexOf(lowerSearch) >= 0;
-    });
-    productsPage.render(result);
-});
 
 
 
