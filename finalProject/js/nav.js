@@ -15,4 +15,3 @@ class Nav {
     }
 }
 const navigation = new Nav();
-

@@ -68,3 +68,51 @@ class Buy {
 }
 
 const buyPopup = new Buy();
+
+
+
+
+
+//check if cart has products for buypopup
+function formRender() {
+    const productsStore = localStorageUtil.getProducts();
+
+    if (productsStore.length == 0) {
+        alert('Oops! Your Cart Is Empty!');
+    } else {
+        buyPopup.render();
+    }
+}
+
+
+
+
+
+
+//add to form information about the order(id of products and sum)
+function addCart() {
+    let inputcart = document.createElement('input');
+    let inputsum = document.createElement('input');
+    const productsStore = localStorageUtil.getProducts();
+    let sum = 0;
+    let cartProducts = '';
+
+    CATALOG.forEach(({ id, price }) => {
+        if (productsStore.indexOf(id) !== -1) {
+            cartProducts += `${id}----`;
+            sum += price;
+            return sum;
+        }
+    });
+
+    inputcart.type = 'hidden';
+    inputcart.name = 'Cart_items';
+    inputcart.value = cartProducts;
+    document.getElementById('form').appendChild(inputcart);
+
+    inputsum.type = 'hidden';
+    inputsum.name = 'Cart_Sum';
+    inputsum.value = sum;
+    document.getElementById('form').appendChild(inputsum);
+}
+

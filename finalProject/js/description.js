@@ -1,5 +1,4 @@
-
-//responsive menu
+//responsive menu + render(footer, nav)
 window.onload = function () {
     let btn = document.querySelector('.mob-btn');
     let nav = document.querySelector('nav');
@@ -21,9 +20,10 @@ window.onload = function () {
         }
     });
     navigation.render();
-    descr.render();
     footer.render();
+    descr.render();
 };
+
 
 
 
@@ -85,70 +85,51 @@ const descr = new Description;
 
 
 
-//for rendering cart number of products 
-class CartNum {
+//class for rendering cart popUp
+class CartPopUp {
 
-    handleOpenCartPopUp() {
-        cartPopUp.render();
+    handleClear() {
+        document.getElementById("cartpopup").innerHTML = '';
     }
 
-    render(count) {
+    render() {
+
+        const productsStore = localStorageUtil.getProducts();
+        let htmlCatalog = '';
+        let sum = 0;
+
+        CATALOG.forEach(({ id, name, price, img }) => {
+            if (productsStore.indexOf(id) !== -1) {
+                htmlCatalog += `
+                <tr>
+                    <td><img class="cartpopup__img" src="${img}" /></td>
+                    <td class="cartpopup__name">${name}</td>
+                    <td  class="cartpopup__price">${price.toLocaleString()} $</td>
+                    <td  class="cartpopup__remove" onclick="descr.handleSetLocationStorage(this, '${id}'), descr.render(), cartPopUp.render();">&times;</td>
+                </tr>
+                `;
+                sum += price;
+            }
+        });
+
         const html = `
-        <div class="cart-wrap">
-        <div class="cart" onclick="cartNum.handleOpenCartPopUp();">
-        <span class="quantity">${count}</span>
-        </div>
+        <div class="cratpopup__container">
+            <span class="cartpopup__close" onclick="cartPopUp.handleClear()">&times;</span>
+            <table>
+                ${htmlCatalog}
+                <tr>
+                <td class="cartpopup__invisible"></td>
+                <td class="cartpopup__name cartpopup__sum"> Together </td>
+                <td  class="cartpopup__price cartpopup__sum">${sum.toLocaleString()} $</td>
+                </tr>
+            </table>
+            <button id="confirmorder" class="confirm_order" onclick="formRender();">Confirm Order</button>
         </div>
         `;
 
-        document.getElementById("cart").innerHTML = html;
+        document.getElementById("cartpopup").innerHTML = html;
     }
 }
 
-const cartNum = new CartNum();
+const cartPopUp = new CartPopUp();
 
-const productsStore = localStorageUtil.getProducts();
-cartNum.render(productsStore.length);
-
-
-
-
-//check if cart has products for buypopup
-function formRender() {
-    const productsStore = localStorageUtil.getProducts();
-
-    if (productsStore.length == 0) {
-        alert('Oops! Your Cart Is Empty!');
-    } else {
-        buyPopup.render();
-    }
-}
-
-
-
-//add to form information about the order(id of products and sum)
-function addCart() {
-    let inputcart = document.createElement('input');
-    let inputsum = document.createElement('input');
-    const productsStore = localStorageUtil.getProducts();
-    let sum = 0;
-    let cartProducts = '';
-
-    CATALOG.forEach(({ id, price }) => {
-        if (productsStore.indexOf(id) !== -1) {
-            cartProducts += `${id}----`;
-            sum += price;
-            return sum;
-        }
-    });
-
-    inputcart.type = 'hidden';
-    inputcart.name = 'Cart_items';
-    inputcart.value = cartProducts;
-    document.getElementById('form').appendChild(inputcart);
-
-    inputsum.type = 'hidden';
-    inputsum.name = 'Cart_Sum';
-    inputsum.value = sum;
-    document.getElementById('form').appendChild(inputsum);
-}
