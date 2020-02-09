@@ -132,4 +132,3 @@ class CartPopUp {
 }
 
 const cartPopUp = new CartPopUp();
-

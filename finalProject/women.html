@@ -30,16 +30,16 @@
     </header>
 
     <div class="search-wrap">
-        <input type="text" id="search-women" class="search" placeholder="Search with name...">
+        <input type="text" id="search" class="search" placeholder="Search with name...">
     </div>
 
     <div class='sorting-btns'>
         <div class="sorting-wrap">
             <span>Sort:</span>
             <div class="wrap-for-sorting-btns">
-                <button class='sort-btn' onclick="productsPage.sortWomenDef();">By Default</button>
-                <button class='sort-btn' onclick="productsPage.sortWomenExCh();">From expensive to cheap</button>
-                <button class='sort-btn' onclick="productsPage.sortWomenChEx();">From cheap to expensive</button>
+                <button class='sort-btn' onclick="productsPage.sortDef();">By Default</button>
+                <button class='sort-btn' onclick="productsPage.sortExCh();">From expensive to cheap</button>
+                <button class='sort-btn' onclick="productsPage.sortChEx();">From cheap to expensive</button>
             </div>
         </div>
 
@@ -47,9 +47,9 @@
             <span class="filter-title">Filters:</span>
             <div class="wrap-for-sorting-btns">
                 <div class="filter"><button class="sort-btn"
-                        onclick="productsPage.filterLifestyleWomen();">Lifestyle</button></div>
+                        onclick="productsPage.filterLifestyle();">Lifestyle</button></div>
                 <div class="filter"><button class="sort-btn"
-                        onclick="productsPage.filterBasketballWomen();">Basketball</button></div>
+                        onclick="productsPage.filterBasketball();">Basketball</button></div>
             </div>
         </div>
     </div>

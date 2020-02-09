@@ -86,7 +86,7 @@ const CATALOG = [
         name: "Air Jordan 1 Retro High Black/Crimson Tint",
         img: "img/catalog/11.jpg",
         price: 120,
-        type: "lifestyle-women",
+        type: "lifestyle",
         gender: "women"
     },
     {
@@ -94,7 +94,7 @@ const CATALOG = [
         name: "Air Jordan 1 Retro Mid SE Crimson",
         img: "img/catalog/12.jpg",
         price: 130,
-        type: "lifestyle-women",
+        type: "lifestyle",
         gender: "women"
     },
     {
@@ -102,7 +102,7 @@ const CATALOG = [
         name: "Air Jordan 1 Retro High OG Pink",
         img: "img/catalog/13.jpg",
         price: 160,
-        type: "lifestyle-women",
+        type: "lifestyle",
         gender: "women"
     },
     {
@@ -110,7 +110,7 @@ const CATALOG = [
         name: "Nike Hyperdunk 2016 Black/White",
         img: "img/catalog/14.jpg",
         price: 100,
-        type: "basketball-women",
+        type: "basketball",
         gender: "women"
     },
     {
@@ -118,7 +118,7 @@ const CATALOG = [
         name: "Nike Air Foamposite One Dark Stucco",
         img: "img/catalog/15.jpg",
         price: 140,
-        type: "lifestyle-women",
+        type: "lifestyle",
         gender: "women"
     },
     {
@@ -126,7 +126,7 @@ const CATALOG = [
         name: "Nike PG 1 Black/Rose",
         img: "img/catalog/16.jpg",
         price: 90,
-        type: "basketball-women",
+        type: "basketball",
         gender: "women"
     },
     {
@@ -261,7 +261,7 @@ const CATALOG = [
         name: "Nike Kyrie 5 Black/White/Hot Lava",
         img: "img/catalog/32.jpg",
         price: 105,
-        type: "basketball-women",
+        type: "basketball",
         gender: "women"
     },
     {
@@ -269,7 +269,7 @@ const CATALOG = [
         name: "Nike Hyperdunk 2017 Low White",
         img: "img/catalog/33.jpg",
         price: 85,
-        type: "basketball-women",
+        type: "basketball",
         gender: "women"
     },
     {
@@ -277,7 +277,7 @@ const CATALOG = [
         name: "Nike Hyperdunk X Black/Violet",
         img: "img/catalog/34.jpg",
         price: 115,
-        type: "basketball-women",
+        type: "basketball",
         gender: "women"
     },
     {
@@ -285,7 +285,7 @@ const CATALOG = [
         name: "Air Jordan 1 Retro High Girls",
         img: "img/catalog/35.jpg",
         price: 145,
-        type: "lifestyle-women",
+        type: "lifestyle",
         gender: "women"
     },
     {
@@ -293,7 +293,7 @@ const CATALOG = [
         name: "Air Jordan 6 Retro Black/Violet",
         img: "img/catalog/36.jpg",
         price: 180,
-        type: "lifestyle-women",
+        type: "lifestyle",
         gender: "women"
     },
     {
@@ -301,7 +301,7 @@ const CATALOG = [
         name: "Nike Air Force 1",
         img: "img/catalog/37.jpg",
         price: 100,
-        type: "lifestyle-women",
+        type: "lifestyle",
         gender: "women"
     },
     {
@@ -341,7 +341,7 @@ const CATALOG = [
         name: "Air Jordan True Flight GS Women",
         img: "img/catalog/42.jpg",
         price: 98,
-        type: "basketball-women",
+        type: "basketball",
         gender: "women"
     },
     {
@@ -349,7 +349,7 @@ const CATALOG = [
         name: "Nike KD 11 'Reach Jam'",
         img: "img/catalog/43.jpg",
         price: 115,
-        type: "basketball-women",
+        type: "basketball",
         gender: "women"
     },
     {
@@ -357,7 +357,7 @@ const CATALOG = [
         name: "Air Jordan 1 Retro Mid GS 'Candy'",
         img: "img/catalog/44.jpg",
         price: 90,
-        type: "lifestyle-women",
+        type: "lifestyle",
         gender: "women"
     },
     {
@@ -365,7 +365,7 @@ const CATALOG = [
         name: "Air Jordan 11 GS Heiress Red Velvet",
         img: "img/catalog/45.jpg",
         price: 195,
-        type: "lifestyle-women",
+        type: "lifestyle",
         gender: "women"
     },
     {
@@ -373,7 +373,7 @@ const CATALOG = [
         name: "Air Jordan 4 Retro White",
         img: "img/catalog/46.jpg",
         price: 135,
-        type: "lifestyle-women",
+        type: "lifestyle",
         gender: "women"
     },
     {
@@ -381,7 +381,7 @@ const CATALOG = [
         name: "Air Jordan 13 Retro Black/Pink",
         img: "img/catalog/47.jpg",
         price: 165,
-        type: "lifestyle-women",
+        type: "lifestyle",
         gender: "women"
     },
 ];

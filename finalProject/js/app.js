@@ -44,85 +44,27 @@ class Products {
         cartNum.render(products.length);
     }
 
-
     sortDef() {
-        productsPage.filterMen();
+        let sortedCatalog = currentCatalog.sort((a, b) => a.id - b.id);
+        this.render(sortedCatalog);
     }
+
     sortExCh() {
-        let sortedCatalog = CATALOG.filter(el => el.gender == "men").sort((a, b) => b.price - a.price);
+        let sortedCatalog = currentCatalog.sort((a, b) => b.price - a.price);
         this.render(sortedCatalog);
     }
 
     sortChEx() {
-        let sortedCatalog = CATALOG.filter(el => el.gender == "men").sort((a, b) => a.price - b.price);
+        let sortedCatalog = currentCatalog.sort((a, b) => a.price - b.price);
         this.render(sortedCatalog);
     }
 
-
-    filterMen() {
-        let filteredcatalog = CATALOG.filter(el => el.gender == "men");
-        this.render(filteredcatalog);
-    }
-
-
     filterLifestyle() {
-        let filteredcatalog = CATALOG.filter(el => el.type == "lifestyle");
+        let filteredcatalog = currentCatalog.filter(el => el.type == "lifestyle");
         this.render(filteredcatalog);
     }
     filterBasketball() {
-        let filteredcatalog = CATALOG.filter(el => el.type == "basketball");
-        this.render(filteredcatalog);
-    }
-    filterNew() {
-        let filteredcatalog = CATALOG.filter(el => el.new == "new");
-        this.render(filteredcatalog);
-    }
-
-
-    //sorting for women
-    filterWomen() {
-        let filteredcatalog = CATALOG.filter(el => el.gender == "women");
-        this.render(filteredcatalog);
-    }
-    sortWomenDef() {
-        productsPage.filterWomen();
-    }
-    sortWomenExCh() {
-        let sortedCatalog = CATALOG.filter(el => el.gender == "women").sort((a, b) => b.price - a.price);
-        this.render(sortedCatalog);
-    }
-    sortWomenChEx() {
-        let sortedCatalog = CATALOG.filter(el => el.gender == "women").sort((a, b) => a.price - b.price);
-        this.render(sortedCatalog);
-    }
-    filterLifestyleWomen() {
-        let filteredcatalog = CATALOG.filter(el => el.gender == "women").filter(el => el.type == "lifestyle-women");
-        this.render(filteredcatalog);
-    }
-    filterBasketballWomen() {
-        let filteredcatalog = CATALOG.filter(el => el.gender == "women").filter(el => el.type == "basketball-women");
-        this.render(filteredcatalog);
-    }
-
-
-    //sorting for new releases
-    sortNewDef() {
-        productsPage.filterNew();
-    }
-    sortNewExCh() {
-        let sortedCatalog = CATALOG.filter(el => el.new == "new").sort((a, b) => b.price - a.price);
-        this.render(sortedCatalog);
-    }
-    sortNewChEx() {
-        let sortedCatalog = CATALOG.filter(el => el.new == "new").sort((a, b) => a.price - b.price);
-        this.render(sortedCatalog);
-    }
-    filterLifestyleNew() {
-        let filteredcatalog = CATALOG.filter(el => el.new == "new").filter(el => el.type == "lifestyle-women");
-        this.render(filteredcatalog);
-    }
-    filterBasketballNew() {
-        let filteredcatalog = CATALOG.filter(el => el.new == "new").filter(el => el.type == "basketball-women");
+        let filteredcatalog = currentCatalog.filter(el => el.type == "basketball");
         this.render(filteredcatalog);
     }
 
@@ -150,7 +92,7 @@ class Products {
                         <span class='products-element__name'>${name}</span>
                         <span class='products-element__price'>${price.toLocaleString()} $</span>
                     </a>
-                    <button class='products-element__btn${activeClass}' onclick="productsPage.handleSetLocationStorage(this, '${id}');" title="Cart is on top">${activeText}</button>
+                    <button class='products-element__btn${activeClass}' onclick="productsPage.handleSetLocationStorage(this, '${id}');">${activeText}</button>
                 </li>
             `;
         });
@@ -164,7 +106,6 @@ class Products {
         document.getElementById("goods").innerHTML = html;
     }
 }
-
 const productsPage = new Products();
 
 
@@ -190,7 +131,7 @@ class CartPopUp {
                     <td><img class="cartpopup__img" src="${img}" /></td>
                     <td class="cartpopup__name">${name}</td>
                     <td  class="cartpopup__price">${price.toLocaleString()} $</td>
-                    <td  class="cartpopup__remove" onclick="productsPage.handleSetLocationStorage(this, '${id}'), productsPage.render(CATALOG), cartPopUp.render();">&times;</td>
+                    <td  class="cartpopup__remove" onclick="productsPage.handleSetLocationStorage(this, '${id}'), productsPage.render(currentCatalog), cartPopUp.render();">&times;</td>
                 </tr>
                 `;
                 sum += price;
@@ -220,27 +161,9 @@ const cartPopUp = new CartPopUp();
 
 
 //search with products names
-$('#search-men').on('keyup', (e) => {
+$('#search').on('keyup', (e) => {
     let search = $(e.currentTarget).val();
-    let result = CATALOG.filter(el => el.gender == "men").filter(el => {
-        let name = el.name.toLowerCase();
-        let lowerSearch = search.toLowerCase();
-        return name.indexOf(lowerSearch) >= 0;
-    });
-    productsPage.render(result);
-});
-$('#search-women').on('keyup', (e) => {
-    let search = $(e.currentTarget).val();
-    let result = CATALOG.filter(el => el.gender == "women").filter(el => {
-        let name = el.name.toLowerCase();
-        let lowerSearch = search.toLowerCase();
-        return name.indexOf(lowerSearch) >= 0;
-    });
-    productsPage.render(result);
-});
-$('#search-new').on('keyup', (e) => {
-    let search = $(e.currentTarget).val();
-    let result = CATALOG.filter(el => el.new == "new").filter(el => {
+    let result = currentCatalog.filter(el => {
         let name = el.name.toLowerCase();
         let lowerSearch = search.toLowerCase();
         return name.indexOf(lowerSearch) >= 0;
