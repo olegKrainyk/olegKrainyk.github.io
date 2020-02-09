@@ -68,7 +68,7 @@ class Description {
 
             htmlDescription += `
                 <div class='product-descr__container content'>
-                <a onclick="javascript:history.back(); return false;" class='product-descr__back-btn'>&larrhk;</a>
+                <a onclick="javascript:history.back(); return false;" class='product-descr__back-btn'>&larr;</a>
                     <img class='product-descr__img' src="${img}" />
                         <div class='product-descr__info'>
                                 <span class='product-descr__name'>${name}</span>
