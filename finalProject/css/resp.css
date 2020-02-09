@@ -221,7 +221,7 @@
     }
     .product-descr__img {
         width: 70%;
-        max-height: 200px;
+        max-height: 370px;
     }
     .product-descr__info {
         width: 30%;
@@ -522,7 +522,7 @@
         font-size: 14px;
     }
     .main-right-col, .main-left-col {
-        height: 80vh;
+        height: 90vh;
         width: 50vw;
     }
     .main-bottom-btn {
