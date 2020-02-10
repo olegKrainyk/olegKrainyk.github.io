@@ -482,6 +482,12 @@
         font-size: 16px;
         padding: 10px 20px;
     }
+    .product-descr__back-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 17px;
+        line-height: 27px;
+    }
 }
 
 @media all and (max-width: 340px) {
