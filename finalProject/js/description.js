@@ -106,7 +106,7 @@ class CartPopUp {
                     <td><img class="cartpopup__img" src="${img}" /></td>
                     <td class="cartpopup__name">${name}</td>
                     <td  class="cartpopup__price">${price.toLocaleString()} $</td>
-                    <td  class="cartpopup__remove" onclick="descr.handleSetLocationStorage(this, '${id}'), descr.render(), cartPopUp.render();">&times;</td>
+                    <td  class="cartpopup__remove" onclick="descr.handleSetLocationStorage(this, '${id}'); descr.render(); cartPopUp.render();">&times;</td>
                 </tr>
                 `;
                 sum += price;
