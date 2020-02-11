@@ -236,6 +236,9 @@
         font-size: 16px;
         padding: 10px 20px;
     }
+    #carouselDscr {
+        height: 370px;
+    }
 }
 
 @media all and (max-width: 760px) {
@@ -494,6 +497,7 @@
     }
     #carouselDscr {
         width: 70%;
+        height: 170px;
     }
 }
 

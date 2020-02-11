@@ -245,6 +245,7 @@ const CATALOG = [
         id: "27",
         name: "Jordan WhyNot Zer0.3 White/Black",
         img: "img/catalog/27.jpg",
+        img2: "img/catalog/27_2.jpg",
         price: 125,
         type: "basketball",
         new: "new",
@@ -254,6 +255,7 @@ const CATALOG = [
         id: "28",
         name: "Nike Kyrie 4 Black",
         img: "img/catalog/28.jpg",
+        img2: "img/catalog/28_2.jpg",
         price: 90,
         type: "basketball",
         gender: "men"
@@ -262,6 +264,7 @@ const CATALOG = [
         id: "29",
         name: "Air Jordan 12 Retro Dark Grey",
         img: "img/catalog/29.jpg",
+        img2: "img/catalog/29_2.jpg",
         price: 175,
         type: "lifestyle",
         gender: "men"
@@ -270,6 +273,7 @@ const CATALOG = [
         id: "30",
         name: "Air Jordan 7 Retro 'Bordeaux'",
         img: "img/catalog/30.jpg",
+        img2: "img/catalog/30_2.jpg",
         price: 215,
         type: "lifestyle",
         gender: "men"
@@ -278,6 +282,7 @@ const CATALOG = [
         id: "31",
         name: "Travis Scott x Air Jordan 6 Retro",
         img: "img/catalog/31.jpg",
+        img2: "img/catalog/31_2.jpg",
         price: 650,
         type: "lifestyle",
         gender: "men"
@@ -286,15 +291,17 @@ const CATALOG = [
         id: "32",
         name: "Nike Kyrie 5 Black/White/Hot Lava",
         img: "img/catalog/32.jpg",
+        img2: "img/catalog/32_2.jpg",
         price: 105,
         type: "basketball",
         gender: "women"
     },
     {
         id: "33",
-        name: "Nike Hyperdunk 2017 Low White",
+        name: "Nike Hyperdunk 2017 White",
         img: "img/catalog/33.jpg",
-        price: 85,
+        img2: "img/catalog/33_2.jpg",
+        price: 95,
         type: "basketball",
         gender: "women"
     },
@@ -302,22 +309,25 @@ const CATALOG = [
         id: "34",
         name: "Nike Hyperdunk X Black/Violet",
         img: "img/catalog/34.jpg",
+        img2: "img/catalog/34_2.jpg",
         price: 115,
         type: "basketball",
         gender: "women"
     },
     {
         id: "35",
-        name: "Air Jordan 1 Retro High Girls",
+        name: "Air Jordan 1 Retro High OG 'Los Primeros'",
         img: "img/catalog/35.jpg",
-        price: 145,
+        img2: "img/catalog/35_2.jpg",
+        price: 1200,
         type: "lifestyle",
         gender: "women"
     },
     {
         id: "36",
-        name: "Air Jordan 6 Retro Black/Violet",
+        name: "Air Jordan 6 Retro Black/Rose",
         img: "img/catalog/36.jpg",
+        img2: "img/catalog/36_2.jpg",
         price: 180,
         type: "lifestyle",
         gender: "women"
@@ -326,6 +336,7 @@ const CATALOG = [
         id: "37",
         name: "Nike Air Force 1",
         img: "img/catalog/37.jpg",
+        img2: "img/catalog/37_2.jpg",
         price: 100,
         type: "lifestyle",
         gender: "women"
@@ -334,6 +345,7 @@ const CATALOG = [
         id: "38",
         name: "Air Jordan 1 High React Purple",
         img: "img/catalog/38.jpg",
+        img2: "img/catalog/38_2.jpg",
         price: 175,
         type: "lifestyle",
         gender: "men"
@@ -342,6 +354,7 @@ const CATALOG = [
         id: "39",
         name: "Nike PG 3 Black/Aqua",
         img: "img/catalog/39.jpg",
+        img2: "img/catalog/39_2.jpg",
         price: 80,
         type: "basketball",
         gender: "men"
@@ -350,6 +363,7 @@ const CATALOG = [
         id: "40",
         name: "Travis Scott x Air Jordan 1 High OG",
         img: "img/catalog/40.jpg",
+        img2: "img/catalog/40_2.jpg",
         price: 1750,
         type: "lifestyle",
         gender: "men"
@@ -358,6 +372,7 @@ const CATALOG = [
         id: "41",
         name: "Air Jordan 3 Retro 'Katrina'",
         img: "img/catalog/41.jpg",
+        img2: "img/catalog/41_2.jpg",
         price: 325,
         type: "lifestyle",
         gender: "men"
@@ -366,14 +381,16 @@ const CATALOG = [
         id: "42",
         name: "Air Jordan True Flight GS Women",
         img: "img/catalog/42.jpg",
+        img2: "img/catalog/42_2.jpg",
         price: 98,
         type: "basketball",
         gender: "women"
     },
     {
         id: "43",
-        name: "Nike KD 11 'Reach Jam'",
+        name: "Nike KD 11 'Peach Jam'",
         img: "img/catalog/43.jpg",
+        img2: "img/catalog/43_2.jpg",
         price: 115,
         type: "basketball",
         gender: "women"
@@ -382,7 +399,8 @@ const CATALOG = [
         id: "44",
         name: "Air Jordan 1 Retro Mid GS 'Candy'",
         img: "img/catalog/44.jpg",
-        price: 90,
+        img2: "img/catalog/44_2.jpg",
+        price: 235,
         type: "lifestyle",
         gender: "women"
     },
@@ -390,6 +408,7 @@ const CATALOG = [
         id: "45",
         name: "Air Jordan 11 GS Heiress Red Velvet",
         img: "img/catalog/45.jpg",
+        img2: "img/catalog/45_2.jpg",
         price: 195,
         type: "lifestyle",
         gender: "women"
@@ -398,6 +417,7 @@ const CATALOG = [
         id: "46",
         name: "Air Jordan 4 Retro White",
         img: "img/catalog/46.jpg",
+        img2: "img/catalog/46_2.jpg",
         price: 135,
         type: "lifestyle",
         gender: "women"
@@ -406,6 +426,7 @@ const CATALOG = [
         id: "47",
         name: "Air Jordan 13 Retro Black/Pink",
         img: "img/catalog/47.jpg",
+        img2: "img/catalog/47_2.jpg",
         price: 165,
         type: "lifestyle",
         gender: "women"
