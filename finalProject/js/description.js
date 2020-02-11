@@ -54,7 +54,7 @@ class Description {
         let htmlDescription = '';
         let hash = '';
         hash += `${window.location.hash.substring(1)}`;
-        CATALOG.filter(el => el.id == hash).forEach(({ id, name, type, price, img }) => {
+        CATALOG.filter(el => el.id == hash).forEach(({ id, name, type, price, img, img2 }) => {
 
             let activeClass = '';
             let activeText = '';
@@ -69,7 +69,26 @@ class Description {
             htmlDescription += `
                 <div class='product-descr__container content'>
                 <a onclick="javascript:history.back(); return false; location.reload();" class='product-descr__back-btn'>&larr;</a>
-                    <img class='product-descr__img' src="${img}" />
+
+                <div id="carouselDscr" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="product-descr__img" src="${img}" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="product-descr__img" src="${img2}" alt="Second slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselDscr" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon black-control" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselDscr" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon black-control" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+
                         <div class='product-descr__info'>
                                 <span class='product-descr__name'>${name}</span>
                                 <span class='product-descr__type'>Type: ${type}</span>

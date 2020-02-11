@@ -3,6 +3,7 @@ const CATALOG = [
         id: "1",
         name: "Air Jordan 1 Retro High Red",
         img: "img/catalog/1.jpg",
+        img2: "img/catalog/1_2.jpg",
         type: "lifestyle",
         price: 130,
         gender: "men"
@@ -11,14 +12,16 @@ const CATALOG = [
         id: "2",
         name: "Air Jordan 1 Retro High Pine Green",
         img: "img/catalog/2.jpg",
+        img2: "img/catalog/2_2.jpg",
         type: "lifestyle",
-        price: 230,
+        price: 190,
         gender: "men"
     },
     {
         id: "3",
         name: "Air Jordan 1 Retro Low Purple",
         img: "img/catalog/3.jpg",
+        img2: "img/catalog/3_2.jpg",
         type: "lifestyle",
         price: 90,
         gender: "men"
@@ -27,6 +30,7 @@ const CATALOG = [
         id: "4",
         name: "Air Jordan 4 Retro SE",
         img: "img/catalog/4.jpg",
+        img2: "img/catalog/4_2.jpg",
         type: "lifestyle",
         price: 200,
         gender: "men"
@@ -35,6 +39,7 @@ const CATALOG = [
         id: "5",
         name: "Air Jordan 13 Retro White/Blue",
         img: "img/catalog/5.jpg",
+        img2: "img/catalog/5_2.jpg",
         type: "basketball",
         price: 220,
         gender: "men"
@@ -43,6 +48,7 @@ const CATALOG = [
         id: "6",
         name: "Air Jordan XXXIV Blue Void",
         img: "img/catalog/6.jpg",
+        img2: "img/catalog/6_2.jpg",
         type: "basketball",
         price: 160,
         new: "new",
@@ -52,6 +58,7 @@ const CATALOG = [
         id: "7",
         name: "Nike Kyrie 4 Red Carpet",
         img: "img/catalog/7.jpg",
+        img2: "img/catalog/7_2.jpg",
         type: "basketball",
         price: 70,
         gender: "men"
@@ -60,6 +67,7 @@ const CATALOG = [
         id: "8",
         name: "Air Jordan 'Why Not?' Zer0.1 'Triple Double King'",
         img: "img/catalog/8.jpg",
+        img2: "img/catalog/8_2.jpg",
         type: "basketball",
         price: 80,
         gender: "men"
@@ -68,6 +76,7 @@ const CATALOG = [
         id: "9",
         name: "Off-White x Air Jordan 1 Retro High OG",
         img: "img/catalog/9.jpg",
+        img2: "img/catalog/9_2.jpg",
         type: "lifestyle",
         price: 3900,
         gender: "men"
@@ -76,6 +85,7 @@ const CATALOG = [
         id: "10",
         name: "Nike LeBron 17 'Lakers'",
         img: "img/catalog/10.jpg",
+        img2: "img/catalog/10_2.jpg",
         type: "basketball",
         price: 180,
         new: "new",
@@ -85,6 +95,7 @@ const CATALOG = [
         id: "11",
         name: "Air Jordan 1 Retro High Black/Crimson Tint",
         img: "img/catalog/11.jpg",
+        img2: "img/catalog/11_2.jpg",
         price: 120,
         type: "lifestyle",
         gender: "women"
@@ -93,15 +104,17 @@ const CATALOG = [
         id: "12",
         name: "Air Jordan 1 Retro Mid SE Crimson",
         img: "img/catalog/12.jpg",
+        img2: "img/catalog/12_2.jpg",
         price: 130,
         type: "lifestyle",
         gender: "women"
     },
     {
         id: "13",
-        name: "Air Jordan 1 Retro High OG Pink",
+        name: "Air Jordan 1 Retro High 'Serena Williams'",
         img: "img/catalog/13.jpg",
-        price: 160,
+        img2: "img/catalog/13_2.jpg",
+        price: 120,
         type: "lifestyle",
         gender: "women"
     },
@@ -109,14 +122,16 @@ const CATALOG = [
         id: "14",
         name: "Nike Hyperdunk 2016 Black/White",
         img: "img/catalog/14.jpg",
+        img2: "img/catalog/14_2.jpg",
         price: 100,
         type: "basketball",
         gender: "women"
     },
     {
         id: "15",
-        name: "Nike Air Foamposite One Dark Stucco",
+        name: "Nike Air Foamposite One Shine",
         img: "img/catalog/15.jpg",
+        img2: "img/catalog/15_2.jpg",
         price: 140,
         type: "lifestyle",
         gender: "women"
@@ -125,6 +140,7 @@ const CATALOG = [
         id: "16",
         name: "Nike PG 1 Black/Rose",
         img: "img/catalog/16.jpg",
+        img2: "img/catalog/16_2.jpg",
         price: 90,
         type: "basketball",
         gender: "women"
@@ -133,6 +149,7 @@ const CATALOG = [
         id: "17",
         name: "Nike Kyrie 6 Black",
         img: "img/catalog/17.jpg",
+        img2: "img/catalog/17_2.jpg",
         price: 130,
         new: "new",
         type: "basketball",
@@ -142,6 +159,7 @@ const CATALOG = [
         id: "18",
         name: "Nike LeBron 15 'Ashes'",
         img: "img/catalog/18.jpg",
+        img2: "img/catalog/18_2.jpg",
         price: 120,
         type: "basketball",
         gender: "men"
@@ -150,6 +168,7 @@ const CATALOG = [
         id: "19",
         name: "Nike Kyrie 5 'Friends'",
         img: "img/catalog/19.jpg",
+        img2: "img/catalog/19_2.jpg",
         price: 110,
         type: "basketball",
         gender: "men"
@@ -158,6 +177,7 @@ const CATALOG = [
         id: "20",
         name: "Nike PG 4 All-Star",
         img: "img/catalog/20.jpg",
+        img2: "img/catalog/20_2.jpg",
         price: 115,
         type: "basketball",
         new: "new",
@@ -167,7 +187,8 @@ const CATALOG = [
         id: "21",
         name: "Nike KD 12",
         img: "img/catalog/21.jpg",
-        price: 150,
+        img2: "img/catalog/21_2.jpg",
+        price: 160,
         type: "basketball",
         new: "new",
         gender: "men"
@@ -176,6 +197,7 @@ const CATALOG = [
         id: "22",
         name: "Nike Zoom Freak 1",
         img: "img/catalog/22.jpg",
+        img2: "img/catalog/22_2.jpg",
         price: 120,
         type: "basketball",
         new: "new",
@@ -183,8 +205,9 @@ const CATALOG = [
     },
     {
         id: "23",
-        name: "Nike Kyrie Low 2 Orange Black",
+        name: "Nike Kyrie Low 2 'Sunset'",
         img: "img/catalog/23.jpg",
+        img2: "img/catalog/23_2.jpg",
         price: 85,
         type: "basketball",
         new: "new",
@@ -194,6 +217,7 @@ const CATALOG = [
         id: "24",
         name: "Nike AlphaDunk 'Pure Magic'",
         img: "img/catalog/24.jpg",
+        img2: "img/catalog/24_2.jpg",
         price: 135,
         type: "basketball",
         new: "new",
@@ -203,6 +227,7 @@ const CATALOG = [
         id: "25",
         name: "Nike Hyperdunk 2016 Low Black/Red",
         img: "img/catalog/25.jpg",
+        img2: "img/catalog/25_2.jpg",
         price: 105,
         type: "basketball",
         gender: "men"
@@ -211,6 +236,7 @@ const CATALOG = [
         id: "26",
         name: "Nike Hyperdunk X Red",
         img: "img/catalog/26.jpg",
+        img2: "img/catalog/26_2.jpg",
         price: 135,
         type: "basketball",
         gender: "men"
