@@ -54,7 +54,7 @@ class Description {
         let htmlDescription = '';
         let hash = '';
         hash += `${window.location.hash.substring(1)}`;
-        CATALOG.filter(el => el.id == hash).forEach(({ id, name, type, price, img, img2 }) => {
+        CATALOG.filter(el => el.id == hash).forEach(({ id, name, type, gender, price, img, img2 }) => {
 
             let activeClass = '';
             let activeText = '';
@@ -92,6 +92,7 @@ class Description {
                         <div class='product-descr__info'>
                                 <span class='product-descr__name'>${name}</span>
                                 <span class='product-descr__type'>Type: ${type}</span>
+                                <span class='product-descr__type'>Gender: ${gender}</span>
                                 <span class='product-descr__price'>${price.toLocaleString()} $</span>
                                 <button class='product-descr__btn${activeClass}' onclick="descr.handleSetLocationStorage(this, '${id}');">${activeText}</button>
                         </div>
